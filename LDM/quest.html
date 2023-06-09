@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head class="logocontainer">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home_style.css">
+
+  <title>Brand Questionnaire</title>
+  <script>
+    function checkAnswers() {
+      var score = 0;
+      var feedback = "";
+
+      //sdfadf1
+      var q1 = document.querySelector('input[name="q1"]:checked');
+      if (q1) {
+        if (q1.value === "supreme") {
+          score += 2;
+          feedback += "Question 1: Correct! Supreme is a popular brand.\n";
+        } else {
+          score -= 1;
+          feedback += "Question 1: Incorrect. Supreme is the correct answer.\n";
+        }
+      } else {
+        feedback += "Question 1: Not answered.\n";
+      }
+
+      // Question 2
+      var q2 = document.getElementById('q2').value.trim();
+      if (q2 !== "") {
+        if (q2.toLowerCase() === "bape") {
+          score += 2;
+          feedback += "Question 2: Correct! Bape is a well-known brand.\n";
+        } else {
+          score -= 1;
+          feedback += "Question 2: Incorrect. Bape is the correct answer.\n";
+        }
+      } else {
+        feedback += "Question 2: Not answered.\n";
+      }
+
+      // Question 3
+      var q3 = document.querySelector('input[name="q3"]:checked');
+      if (q3) {
+        if (q3.value === "palace") {
+          score += 2;
+          feedback += "Question 3: Correct! Palace is a popular brand.\n";
+        } else {
+          score -= 1;
+          feedback += "Question 3: Incorrect. Palace is the correct answer.\n";
+        }
+      } else {
+        feedback += "Question 3: Not answered.\n";
+      }
+
+      // Question 4
+      var q4 = document.getElementById('q4').value.trim();
+      if (q4 !== "") {
+        if (q4.toLowerCase() === "supreme") {
+          score += 2;
+          feedback += "Question 4: Correct! Supreme is a well-known brand.\n";
+        } else {
+          score -= 1;
+          feedback += "Question 4: Incorrect. Supreme is the correct answer.\n";
+        }
+      } else {
+        feedback += "Question 4: Not answered.\n";
+      }
+
+      // Question 5
+      var q5 = document.getElementById('q5').value.trim();
+      if (q5 !== "") {
+        if (q5.toLowerCase() === "bape") {
+          score += 2;
+          feedback += "Question 5: Correct! Bape is a popular brand.\n";
+        } else {
+          score -= 1;
+          feedback += "Question 5: Incorrect. Bape is the correct answer.\n";
+        }
+      } else {
+        feedback += "Question 5: Not answered.\n";
+      }
+
+      // Display the score and feedback
+      alert("Score: " + score + "\n\nFeedback:\n" + feedback);
+    }
+  </script>
+</head>
+
+<body class="logocontainer">
+  
+  <form>
+    <fieldset>
+      <legend>Which is the most famous brand?</legend>
+      <label>
+        <input type="radio" name="q1" value="supreme">
+        Supreme
+      </label>
+      <label>
+        <input type="radio" name="q1" value="palace">
+        Palace
+      </label>
+      <label>
+        <input type="radio" name="q1" value="bape">
+        Bape
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Question 2</legend>
+      <label>
+        Which brand has a signature ape logo?
+        <input type="text" id="q2">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Which is the cheapest brand?</legend>
+      <label>
+        <input type="radio" name="q3" value="supreme">
+        Supreme
+      </label>
+      <label>
+        <input type="radio" name="q3" value="palace">
+        Palace
+      </label>
+      <label>
+        <input type="radio" name="q3" value="bape">
+        Bape
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Question 4</legend>
+      <label>
+        Which brand is known for its box logo?
+        <input type="text" id="q4">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Question 5</legend>
+      <label>
+        Which brand is famous for its shark hoodies?
+        <input type="text" id="q5">
+      </label>
+    </fieldset>
+
+    <button type="button" onclick="checkAnswers()">Submit</button>
+  </form>
+</body>
+
+</html>

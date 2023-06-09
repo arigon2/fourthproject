@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE clothing SYSTEM "data.dtd">
+    <clothing>
+      <brand>
+        <name>Palace</name>
+        <description>Palace is a London-based skateboarding brand known for its unique and bold designs.</description>
+      </brand>
+      <brand>
+        <name>Bape</name>
+        <description>Bape, short for A Bathing Ape, is a Japanese streetwear brand popular for its iconic ape logo and camouflage patterns.</description>
+      </brand>
+      <brand>
+        <name>Supreme</name>
+        <description>Supreme is a New York City skateboarding brand recognized for its collaborations, limited releases, and distinctive red box logo.</description>
+      </brand>
+    </clothing>

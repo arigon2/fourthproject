@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/w3.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/index_style.css" />
+</head>
+
+<body class="fondo">
+  <header>
+    <div class="titulo">
+      <h1>Hypebeast Streetwear</h1>
+      <br>
+    </div>
+  </header>
+  <nav>
+    <ul class="menu_movil menu_drop">
+      <li>
+        <a href="#menu" class="size_icon"> <i class="fa fa-bars"></i></a>
+        <ul>
+          <li><a href="#quest.html">Quest</a></li>
+          <li><a href="#page1.html">Palace</a></li>
+          <li><a href="#page2.html">Supreme</a></li>
+          <li><a href="#home.html">Stussy</a></li>
+          <li><a href="#gallery.html">Bape</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <ul class="menu_pc menu_drop">
+    <li class="col-2 col-s-4"><a href="index.html">HOME</a></li>
+    <li class="col-2 col-s-4"><a href="page1.html">STUSSY</a></li>
+    <li class="col-2 col-s-4"><a href="page2.html">SUPREME</a></li>
+    <li class="col-2 col-s-4"><a href="home.html">BAPE</a></li>
+    <li class="col-2 col-s-4"><a href="gallery.html">GALLERY</a></li>
+    <li class="col-2 col-s-4"><a href="quest.html">QUEST</a></li>
+  </ul>
+  <h1 class="logocontainer">Welcome to the exciting world of Hypebeast fashion!
+
+    Hypebeast culture has gained an enormous following in recent years, becoming a global phenomenon that
+    ranges from clothing to accessories and footwear. If you are looking to be at the forefront of urban fashion and
+    to be part of a passionate community, look no further, Hypebeast fashion is for you!
+
+    So what exactly is a Hypebeast? Simply put, a Hypebeast is a person who chases and
+    is proud to own exclusive and limited edition fashion products. The word "Hype" refers to the
+    excitement and anticipation surrounding these limited releases, while "Beast" alludes to the dedication and
+    unbridled passion of the followers of this trend.
+
+    The most coveted brands in the Hypebeast world include legendary names like Supreme, Palace, Stussy and BAPE,
+    to mention just a few. These brands collaborate with renowned artists, designers and other brands, creating
+    unique pieces that generate a great demand and a frenzy among the followers. Obtain a garment or an accessory
+    limited edition of one of these brands can be quite a challenge, and those who succeed are seen as
+    true fashion experts.
+
+    The Hypebeast aesthetic is characterized by bold designs, vibrant colors, and bold logos. The prints
+    camouflage, pop art graphics and motifs inspired by street culture are common elements in this
+    trend. The Hypebeasts are also known for combining streetwear with elements of high fashion and
+    vintage style, creating unique and eclectic looks.
+
+    The Hypebeast community is extremely active on social media and fashion platforms, where they share their
+    latest acquisitions, discuss the latest trends and collaborations, and exchange tips on how to
+    Get the most wanted products. This community supports and celebrates creativity and individuality, and being a
+    Hypebeast allows you to express your personal style in an authentic and unique way.
+
+    If you're ready to dive into the world of Hypebeast, get ready to chase down exclusive releases, stay tuned
+    to the most anticipated collaborations and be willing to invest time and effort to get those fashion pieces
+    coveted. Join the exciting Hypebeast community and discover how streetwear can become a fashion
+    of art and personal expression.
+
+    Remember, being a Hypebeast is about more than just clothes and accessories, it's about being part of a passionate culture.
+    and vibrant that celebrates fashion, creativity and exclusivity. Welcome to the exciting world of fashion
+    Hypebeast!</h1>
+  <section class="logocontainer">
+    <div class="col-6 col-s-12 "><img src="images/folderindex/yeezy.png" alt="yeezy"></div>
+    <div class="col-6 col-s-12 "><img src="LDM/images/bape.jpg" alt="bape"></div>
+  </section>
+  <br>
+  <button onclick="topFunction()" style="position:fixed; bottom:20px; right:30px;">Go Up</button>
+  <script>
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        myFunction(this);
+      }
+    };
+    xmlhttp.open("GET", "data.xml", true);
+    xmlhttp.send();
+
+    function myFunction(xml) {
+      var x, i, xmlDoc, table;
+      xmlDoc = xml.responseXML;
+      table = "<tr><th>Brand</th><th>Description</th></tr>";
+      x = xmlDoc.getElementsByTagName("brand");
+      for (i = 0; i < x.length; i++) {
+        var name = x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        var description = x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+        table += "<tr><td>" + name + "</td><td>" + description + "</td></tr>";
+      }
+      document.getElementById("clothingTable").innerHTML = table;
+    }
+  </script>
+  <div class="tablaxml">
+    <table id="clothingTable" border="1">
+    </table>
+  </div>
+  <br>
+  <div class="col-2 col-s-6"> <img class="footer" src="images/footer.png" alt="footer" /></div>
+</body>
+
+</html>

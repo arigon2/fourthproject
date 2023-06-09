@@ -1,0 +1,37 @@
+.palace{
+  height: 100px;
+  }
+
+  .titulo{
+  color: azure;
+  font-size: large;
+  text-align: center;
+  background-color: #6e0101;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: -1%;
+  }
+
+   .logocontainer{
+  align-items: center;
+  text-align: center;
+  font-size:medium;
+  background-color: #6e0101;
+  color: rgb(255, 255, 255);
+  }
+
+    .fondo{background-color: #6e0101;}
+    img{
+      width: 100%;
+  }
+  
+  footer{
+      width: 50%;
+      text-align: center;
+      align-items: center;
+  } 
+  
+  .footimg{
+      width: 40%;
+      text-align: center;
+  }
+  
